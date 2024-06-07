@@ -1,17 +1,19 @@
 package ru.bobrysheva.first_spring_project.item;
 
 public enum DayOfWeek {
-    SUNDAY ("Воскресенье"), MONDAY ("Понедельник"), TUESDAY ("Вторник"),
-    WEDNESDAY ("Среда"), THURSDAY ("Четверг"), FRIDAY ("Пятница"),
-    SATURDAY ("Суббота");
+    Sunday("Воскресенье"), Monday("Понедельник"), Tuesday("Вторник"),
+    Wednesday("Среда"), Thursday("Четверг"), Friday("Пятница"),
+    Saturday("Суббота");
 
     String translation;
-    DayOfWeek () {
 
+    DayOfWeek() {
     }
-    DayOfWeek (String translation) {
+
+    DayOfWeek(String translation) {
         this.translation = translation;
     }
+
     public String getDayOfWeek() {
         return translation;
     }

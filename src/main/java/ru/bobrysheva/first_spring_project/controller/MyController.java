@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.bobrysheva.first_spring_project.item.DayOfWeek;
 
 @RestController
-@RequestMapping("dayOfWeek")
 
 public class MyController {
-    @GetMapping ("/dayOfWeek")
+    @GetMapping("/dayOfWeek")
 
-    public String dayOfWeek (@RequestParam(value = "dayOfWeek", defaultValue = "Day of week") DayOfWeek dayOfWeek) {
-     return String.format("Сегодня %s", dayOfWeek.getDayOfWeek());
+    public String dayOfWeek(@RequestParam(value = "dayOfWeek", defaultValue = "Day of week") String dayOfWeek) {
+        DayOfWeek day1 = DayOfWeek.valueOf(dayOfWeek);
+        String translationOfDay = day1.getDayOfWeek();
+        return String.format("Сегодня %s", translationOfDay);
     }
 }
